@@ -1,0 +1,34 @@
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * For more information see:
+ *   https://sailsjs.com/anatomy/assets/styles/importer-less
+ */
+
+
+// For example:
+//
+// @import 'variables/colors.less';
+// @import 'mixins/foo.less';
+// @import 'mixins/bar.less';
+// @import 'mixins/baz.less';
+//
+// @import 'mixins-and-variables.less';
+// @import 'pages/login.less';
+// @import 'pages/signup.less';
+//
+// etc.
+
+/*! This special bang (!) comment is here to trick the `hash` Grunt task into working out-of-the-box, without any real CSS. You can delete this once you've imported ≥1 .less file as demonstrated above. */
+
+@import 'pages/materiales.less';
+
+body{
+    padding: 2%;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+}

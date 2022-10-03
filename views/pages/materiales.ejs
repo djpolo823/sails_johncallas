@@ -1,0 +1,35 @@
+<div id="materiales" v-cloak>
+
+  <h1>MATERIALES</h1>
+
+  
+      <%
+      const options2 = { style: 'currency', currency: 'USD', minimumFractionDigits: 0 };
+      const numberFormat2 = new Intl.NumberFormat('en-US', options2);
+      var cat = '';
+      %>
+      <% material.forEach(item=>{%>
+        <% if(cat != item.categoria){%>
+          <div class="table-container">
+            <table class="categoryTable grid-item">
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <%= item.categoria.toUpperCase()%>
+                  </th>
+                </tr>
+              </thead><%}%>
+              <tbody>
+                <tr>
+                  <td><%= item.nombreMaterial%></td>
+                  <td><%= item.unidadMedida%></td>
+                  <td  class="moneda" style="text-align: end;"><%= numberFormat2.format(item.precioUnidad) %></td>
+                </tr>
+                <% cat= item.categoria})%>
+              </tbody>
+            </table>
+          </div>
+
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
