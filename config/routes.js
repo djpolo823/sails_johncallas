@@ -21,6 +21,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'GET /materiales': { action: 'view-materiales'},
+  'GET /nuevo_material': { action: 'nuevo-material'}
 
 
   /***************************************************************************
