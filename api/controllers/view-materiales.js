@@ -23,6 +23,11 @@ module.exports = {
     const material = await Materiales.find({
       sort: [{categoria: 'ASC'},{nombreMaterial: 'ASC'}]
     })
+
+    /*const material = await Materiales.find({
+      where: { categoria: 'Material'},
+      sort: [{categoria: 'ASC'},{nombreMaterial: 'ASC'}]
+    })*/
     
     return exits.success({material});
 
