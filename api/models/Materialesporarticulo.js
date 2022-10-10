@@ -1,5 +1,5 @@
 /**
- * Materiales.js
+ * Materialesporarticulo.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,13 +13,8 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    categoria: { type: 'string'},
-    
-    nombreMaterial: { type: 'string' },
-
-    unidadMedida: { type: 'string' },
-
-    precioUnidad: { type: 'number' },
+    id_material:  { type: 'number'},
+    cantidad: { type: 'number' },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -30,7 +25,12 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-  }
+    articulos: {
+      model: 'articulo',
+      columnName: 'id_articulo'
+    }
+     
+  },
 
 };
 

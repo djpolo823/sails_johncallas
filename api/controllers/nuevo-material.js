@@ -21,7 +21,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    const nuevo_material = await Materiales.create({
+    const nuevo_material = await Articulo.create({
       nombreMaterial: "Nuevo producto",
       categoria:      "Nueva categoria",
       unidadMedida:   "Nueva medida",

@@ -1,0 +1,17 @@
+<div id="precios" v-cloak>
+
+  <h1>Productos</h1>
+  
+  <%var devProducto%>
+
+  <% precio_productos.forEach(item=>{%>
+  
+   <%if(devProducto!=item.articulos.nombreArticulo){%>
+     <h4><%= item.articulos.nombreArticulo%></h4>
+   <%}  devProducto=item.articulos.nombreArticulo%>
+   <p><%= item.id_material%></p>
+  
+  <%})%>
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
