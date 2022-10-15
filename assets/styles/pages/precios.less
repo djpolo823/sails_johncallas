@@ -1,5 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --brown: #813c0e;
+  --gray: #69523E;
+}
+
 #precios {
 
-  //…
+  .product-card{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: #fff;
+    
+    width: 80%;
+    height: 60vh;
+    display: inline-flex;
+    margin: 3vh auto;
+  }
+
+  .col-9{
+    
+    background-color: #4d3201;
+    background-image: linear-gradient(62deg, #813c0e 0%, #b86b13 50%, #dd933f 100%);
+
+    width: 66%;
+    padding: 5%;
+    flex-direction: row;
+  }
+
+  .product-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: white;
+  }
+
+  .product-main-img{
+    width: 50%;
+    position: relative;
+    bottom:30vh;
+    left: 70%;
+  }
+
+  .material-list{
+    width: 50%;
+    line-height: 1em;
+    list-style-type: none;
+  }
+
+  .col-3{
+    background-color: rgb(238, 228, 228);
+    
+    width: 33%;
+    flex-direction: row;
+  }
+
+  .product-logo{
+    width: 60%;
+    position: relative;
+    top: 10px;
+    right: -40%;
+  }
 
 }

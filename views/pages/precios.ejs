@@ -2,16 +2,28 @@
 
   <h1>Productos</h1>
   
-  <%var devProducto%>
+<% producto.forEach(productItem=>{%>
 
-  <% precio_productos.forEach(item=>{%>
+  <div class="product-card">
+
+    
+      <div class="col-9">
+        
+
+        <h4 class="product-name"><%= productItem.nombreArticulo%></h4>
+        <img class="product-main-img" src="/images/products/<%= productItem.nombreArticulo%>.png" alt="">
+        <ul class="material-list">
+          <% productItem.material.forEach(item=>{%>
+            <li><%= item.cantidad %></li>
+          <%})%>
+        </ul>
+      </div>
+      <div class="col-3">
+        <img class="product-logo" src="/images/LOGO.png" alt="">
+      </div>
+    
+  </div>
   
-   <%if(devProducto!=item.articulos.nombreArticulo){%>
-     <h4><%= item.articulos.nombreArticulo%></h4>
-   <%}  devProducto=item.articulos.nombreArticulo%>
-   <p><%= item.id_material%></p>
-  
-  <%})%>
+<%})%>
 
 </div>
-<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

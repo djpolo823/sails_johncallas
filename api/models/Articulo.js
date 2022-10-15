@@ -5,6 +5,8 @@
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
+const Materialesporarticulo = require("./Materialesporarticulo");
+
 module.exports = {
 
   attributes: {
@@ -26,6 +28,10 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
+    material: {
+      collection: 'materialesporarticulo',
+      via: 'matxart'
+    }
   },
 
 };

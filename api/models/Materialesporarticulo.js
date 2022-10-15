@@ -13,7 +13,6 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    id_material:  { type: 'number'},
     cantidad: { type: 'number' },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -25,9 +24,14 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    articulos: {
-      model: 'articulo',
+    matxart: {
+      model:  'articulo',
       columnName: 'id_articulo'
+    },
+
+    detmaterial: {
+      model: 'materiales',
+      columnName: 'id_material'
     }
      
   },

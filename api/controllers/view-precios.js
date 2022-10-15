@@ -20,10 +20,12 @@ module.exports = {
 
     // Respond with view.
 
-    const precio_productos = await Materialesporarticulo.find().populate('articulos');
-    console.log(precio_productos);
-    return exits.success({precio_productos});
-
+    
+    const producto = await Articulo.find().populate('material');
+    const detalle = await Materialesporarticulo.find().populate('detmaterial');
+    console.log(producto);
+    console.log(detalle);
+    return exits.success({producto});
   }
 
 
