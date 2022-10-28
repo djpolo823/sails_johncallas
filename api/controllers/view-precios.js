@@ -1,7 +1,5 @@
 module.exports = {
-
-
-  friendlyName: 'View precios',
+friendlyName: 'View precios',
 
 
   description: 'Display "Precios" page.',
@@ -20,13 +18,13 @@ module.exports = {
 
     // Respond with view.
 
-    
-    const producto = await Articulo.find().populate('material');
+    const producto = await Articulo.find();
     const detalle = await Materialesporarticulo.find().populate('detmaterial');
-    console.log(producto);
-    console.log(detalle);
-    return exits.success({producto});
+    
+    producto.forEach(element => {
+      element.materiales= detalle.filter(item=> item.matxart==element.id);
+    });
+    producto.forEach(x=> console.log(x.materiales))
+    return exits.success({producto, detalle});
   }
-
-
 };

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://db.onlinewebfonts.com/c/03bd7255184e8e8ad4d2a521fa920b6c?family=PolySans+Neutral');
 :root{
   --brown: #813c0e;
   --gray: #69523E;
@@ -11,54 +12,88 @@
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     background-color: #fff;
     
-    width: 80%;
-    height: 60vh;
-    display: inline-flex;
-    margin: 3vh auto;
+    width: 360px;
+    margin: 3vh 2vw;
+    border-radius: 20px;
+    float: left;
+    overflow: hidden;
   }
 
   .col-9{
     
-    background-color: #4d3201;
-    background-image: linear-gradient(62deg, #813c0e 0%, #b86b13 50%, #dd933f 100%);
+    background-color: #ffffff;
+    padding: 10%;
 
-    width: 66%;
-    padding: 5%;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1 fr 1fr 1fr;
+    grid-template-areas: 
+    "image image image image"
+    "name name name name"
+    "list list list list";
   }
 
   .product-name{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 2.5em;
     font-weight: 800;
-    color: white;
+    color: #000;
+
+    grid-area: name;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .img-frame{
+    width: 290px;
+    height: 290px;
+    padding: 0;
+    margin: 0;
+    position: relative;
   }
 
   .product-main-img{
-    width: 50%;
-    position: relative;
-    bottom:30vh;
-    left: 70%;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    grid-area: image;
+    -webkit-filter: drop-shadow(15px 15px 15px rgba(68, 66, 66, 0.6));
+        filter: drop-shadow(15px 15px 15px rgba(68, 66, 66, 0.6));
   }
 
   .material-list{
-    width: 50%;
+    font-family: "PolySans Neutral";
     line-height: 1em;
     list-style-type: none;
+    color: #000;
+
+    height: 500px;
+
+    grid-area: list;
+    justify-self: start;
   }
 
-  .col-3{
-    background-color: rgb(238, 228, 228);
-    
-    width: 33%;
-    flex-direction: row;
+  .nom-material{
+    width: 50%;
+  }
+
+  .can-material{
+    width: 20%;
+    height: max-content;
   }
 
   .product-logo{
-    width: 60%;
+    width: 200px;
     position: relative;
-    top: 10px;
-    right: -40%;
+    top: 50%;
+    z-index: -1;
   }
 
 }

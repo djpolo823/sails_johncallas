@@ -32,7 +32,7 @@ module.exports = {
     detmaterial: {
       model: 'materiales',
       columnName: 'id_material'
-    }
+    },
      
   },
 

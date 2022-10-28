@@ -1,26 +1,23 @@
 <div id="precios" v-cloak>
 
-  <h1>Productos</h1>
+  <h1>Relación de Materiales por Artículo.</h1>
   
 <% producto.forEach(productItem=>{%>
 
   <div class="product-card">
-
-    
-      <div class="col-9">
-        
-
-        <h4 class="product-name"><%= productItem.nombreArticulo%></h4>
+    <div class="col-9">
+      <div class="img-frame">
         <img class="product-main-img" src="/images/products/<%= productItem.nombreArticulo%>.png" alt="">
-        <ul class="material-list">
-          <% productItem.material.forEach(item=>{%>
-            <li><%= item.cantidad %></li>
-          <%})%>
-        </ul>
       </div>
-      <div class="col-3">
-        <img class="product-logo" src="/images/LOGO.png" alt="">
+      <h4 class="product-name"><%= productItem.nombreArticulo%></h4>
+      <div class="material-list">
+        <% productItem.materiales.forEach(item=>{%>
+          <div class="nom-material"><%= item.detmaterial.nombreMaterial%></div>
+          <div class="can-material"><%= item.cantidad %></div>
+        <%})%>
       </div>
+      
+    </div>
     
   </div>
   
